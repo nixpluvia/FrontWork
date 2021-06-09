@@ -1,15 +1,18 @@
 $(document).ready(function(){
 
-
+    /* pc gnb menu */
     fullMenu('.gnb .menu-01 > li','.gnb','#header',80,330);
 
+    /* sitemap */
     clickToggle('.btn-sitemap', '#header .sitemap','body');
-
+    
+    /*mobile gnb menu */
     clickToggle('.btn-mobile', '#header .mo-menu','#header .mo-menu-bg','body');
-
-    // siblingToggle(button,siblings class, menuBox class);
     siblingToggle('#header .mo-gnb .menu-01-tit','.mo-r-menu','.mo-gnb');
-    accrodion('#header .mo-gnb .menu-02-tit','.menu-03','.mo-gnb');
+    accrodion('#header .mo-gnb .menu-02-tit','.menu-03','.mo-gnb',300);
+
+    /* footer menu */
+    accrodion('#footer .foot-t-menu .f-menu-tit','.f-menu-02','.foot-t-menu',300,true);
 
     winResize()
 });
@@ -29,7 +32,7 @@ function winResize(){
         $body.removeClass('on');
     });
 }
-
+/* FullMenu */
 function fullMenu(menuElem,menuWrap,menuBox,MinH,MaxH){
     var $menuElem = null;
     var $menuWrap = null;
@@ -77,7 +80,7 @@ function fullMenu(menuElem,menuWrap,menuBox,MinH,MaxH){
     }
     start();
 }
-
+/* Click Toggle Class Button */
 function clickToggle(button,menuBox,box01,box02){
     var $btnToggle = null;
     var $menuBox = null;
@@ -120,6 +123,7 @@ function clickToggle(button,menuBox,box01,box02){
     start();
 }
 
+/* Siblings Toggle Button */
 function siblingToggle(button,sibling,menuBox){
     var $btnToggle = null;
     var $sibling = null;
@@ -165,15 +169,20 @@ function siblingToggle(button,sibling,menuBox){
     start();
 }
 
-function accrodion(button,sibling,menuBox,child){
+/* Accrodion Menu */
+function accrodion(button,sibling,menuBox,speed,indie,child){
     var $btnToggle = null;
     var $acr = null;
     var $menuBox = null;
     var $active = null;
+    var $child = null;
+    var $indie = null;
 
     function initParam(){
         $btnToggle = $(button);
         $menuBox = $btnToggle.closest(menuBox);
+        child == undefined ? $child = false : $child = child;
+        indie == undefined ? $indie = false : $indie = indie;
     }
 
     function mouEvent(){
@@ -181,7 +190,7 @@ function accrodion(button,sibling,menuBox,child){
             e.preventDefault();
             var $this = $(this);
 
-            if(child == undefined) {
+            if($child == false) {
                 $acr = $this.siblings(sibling);
                 $active = $menuBox.find(sibling + '.on');
             }else {
@@ -189,25 +198,42 @@ function accrodion(button,sibling,menuBox,child){
                 $active = $menuBox.find(sibling+' '+ child +'.on');
             }
 
-            acrToggle($this);
+            if($indie == false){
+                acrToggle($this);
+            }else{
+                acrIndie($this);
+            }
             
         });
     }
-
+    /* Accrodion Group */
     function acrToggle(elem){
         if(elem.hasClass('on')){
             elem.removeClass('on');
             $acr.removeClass('on');
-            $acr.stop().slideUp(300);
+            $acr.stop().slideUp(speed);
 
         }else {
             $btnToggle.removeClass('on');
             $active.removeClass('on');
-            $active.stop().slideUp(300);
+            $active.stop().slideUp(speed);
 
             elem.addClass('on');
             $acr.addClass('on');
-            $acr.stop().slideDown(300);
+            $acr.stop().slideDown(speed);
+        }
+    }
+    /* Accrodion Independent */
+    function acrIndie(elem){
+        if(elem.hasClass('on')){
+            elem.removeClass('on');
+            $acr.removeClass('on');
+            $acr.stop().slideUp(speed);
+
+        }else {
+            elem.addClass('on');
+            $acr.addClass('on');
+            $acr.stop().slideDown(speed);
         }
     }
 

@@ -1,6 +1,6 @@
 body.on {overflow:hidden;}
 
-#header {position: fixed; top: 0; left: 0; width: 100%; height: 80px; border-bottom: 1px solid #e0e0e0; transition: height 0.6s; background-color: #fff;}
+#header {position: fixed; z-index:900; top: 0; left: 0; width: 100%; height: 80px; border-bottom: 1px solid #e0e0e0; transition: height 0.6s; background-color: #fff;}
 #header #logo {position: absolute; z-index:1; top: 15px; left: 30px; width: 150px; height: 50px; }
 #header #logo > a {display: block; cursor:pointer;}
 #header #logo > a > img{display: block; width: 100%;}
@@ -89,38 +89,13 @@ body.on {overflow:hidden;}
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #header .sitemap {display: none; position: fixed; z-index: 999; top: 0; left: 0; width: 100vw; height: 100vh; overflow-y: scroll; background-color: rgba(0,0,0,0.5);}
 #header .sitemap.on {display: block;}
-#header .sitemap .sitemap-wrap {position: absolute; top: 100px; left: 50%; max-width: 1400px; width: 100%; padding-bottom: 100px; transform: translateX(-50%);}
+#header .sitemap .sitemap-wrap {position: absolute; top: 0; left: 50%; max-width: 1400px; width: 100%; padding: 100px; transform: translateX(-50%);}
 #header .sitemap .sitemap-wrap .con-h {position: relative; width: 100%; height:80px; background-color: #ff9900;}
 #header .sitemap .sitemap-wrap .con-h > strong {display: block; padding: 0 30px; height: 80px; line-height: 80px;font-size: 1.5rem; color: #fff;}
 #header .sitemap .sitemap-wrap .con-h > .close {position: absolute; top: 15px; right: 30px; width: 50px; height: 50px; background: url() no-repeat center;}
-#header .sitemap .sitemap-wrap .con-box {padding-top: 50px; background-color: #fff;}
+#header .sitemap .sitemap-wrap .con-box {padding:30px; background-color: #fff;}
 #header .sitemap .sitemap-wrap .con-box .menu-01 {}
 #header .sitemap .sitemap-wrap .con-box .menu-01 > li {display: block; width: 100%;}
 #header .sitemap .sitemap-wrap .con-box .menu-01 > li::after{content:""; display: block; clear: both;}
@@ -141,5 +116,14 @@ body.on {overflow:hidden;}
 #con {max-width: 1400px;}
 
 
-#footer {background-color: rgb(63, 63, 63);}
-#footer .footer-wrap {max-width: 1400px;}
+#footer {background-color: #3f3f3f; height: 200px;}
+#footer .footer-wrap { border-bottom: 1px solid #cecece;}
+#footer .footer-wrap .foot-t-menu {max-width: 1400px; margin: 0 auto;}
+#footer .footer-wrap .foot-t-menu::after {content:""; display: block; clear: both;}
+#footer .footer-wrap .foot-t-menu > li {float: left; position: relative; width: 33.3333%; border-right: 1px solid #e0e0e0;}
+#footer .footer-wrap .foot-t-menu > li:first-child{border-left: 1px solid #e0e0e0;}
+#footer .footer-wrap .foot-t-menu > li .f-menu-tit {display: block; height: 35px; line-height: 35px; text-align: center; color:#cecece;}
+#footer .footer-wrap .foot-t-menu > li .f-menu-02 {display: none; position: absolute; left: 0; bottom: 100%; width: 100%; max-height: 165px; overflow-y:auto; background-color: #3f3f3f;}
+#footer .footer-wrap .foot-t-menu > li .f-menu-02 > li {border-bottom: 1px solid #e0e0e0;}
+#footer .footer-wrap .foot-t-menu > li .f-menu-02 > li > a {display: block; height: 35px; line-height: 35px; text-align:center; color: #cecece;}
+
