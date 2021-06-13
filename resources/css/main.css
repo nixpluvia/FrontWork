@@ -1,0 +1,30 @@
+#con .con-tit {display: block; font-size: 2rem; font-weight: bold; color: #3f3f3f;}
+
+#con .tab-h {display: block;}
+#con .tab-h::after{content:"";display: block;clear: both;}
+#con .tab-h > li {float: left;}
+#con .tab-con {display: none;}
+#con .tab-con.on {display: block;}
+
+
+
+#con .board-wrap {width: 50%;}
+#con .board-wrap .con-h{display: block;}
+#con .board-wrap .con-h::after{content:"";display: block;clear: both;}
+#con .board-wrap .con-h .tab-h {}
+#con .board-wrap .con-h .tab-h > li {border-radius: 5px 0 5px 0}
+#con .board-wrap .con-h .tab-h > li > a{display: block; height: 40px; padding: 0 10px; border: 1px solid #e0e0e0; line-height: 40px; font-weight: bold; font-size: 1.25rem; color: #3f3f3f;}
+#con .board-wrap .con-h .tab-h > li > a.on {color: #ff9900;}
+#con .board-wrap .tab-con {position: relative; border: 1px solid #e0e0e0;}
+#con .board-wrap .tab-con .btn-more {position: absolute; top: -40px; right: 0; width: 40px; height: 40px; background:url(http://via.placeholder.com/30x30/ff9900/ffffff?text=CLOSE)}
+#con .board-wrap .tab-con > ul {}
+#con .board-wrap .tab-con > ul::after {content:"";display: block;clear: both;}
+#con .board-wrap .tab-con > ul > li {float:left; width: 50%;}
+#con .board-wrap .tab-con > ul > li .list-con {display: block;}
+#con .board-wrap .tab-con > ul > li .list-con::after {content:"";display: block;clear: both;}
+#con .board-wrap .tab-con > ul > li .list-con .date-con {float:left; width:70px; text-align:center;}
+#con .board-wrap .tab-con > ul > li .list-con .date-con .day {display: block; height: 45px; margin-bottom: 10px; line-height: 45px;font-size: 3rem;}
+#con .board-wrap .tab-con > ul > li .list-con .date-con .month {display: block; height: 15px; line-height: 15px; font-weight: bold; font-size: 0.875rem;color: #acacac;}
+#con .board-wrap .tab-con > ul > li .list-con .list-con-box {display: block; padding-left: 20px; overflow:hidden;}
+#con .board-wrap .tab-con > ul > li .list-con .list-con-box .list-tit{font-size: 1.25rem; color: #3f3f3f;}
+#con .board-wrap .tab-con > ul > li .list-con .list-con-box .list-post{overflow:hidden;max-height: 42px;font-size: 1rem; color: #3f3f3f;  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; white-space: normal; word-wrap: break-word;}
