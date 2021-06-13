@@ -247,7 +247,7 @@ function accrodion(button,sibling,menuBox,speed,indie,child){
     start();
 }
 
-/* Accrodion Menu */
+/* tabBox */
 function tabBox(button,tabBox,boxWrap){
     var $tabBtn = null;
     var $boxWrap = null;
@@ -269,7 +269,7 @@ function tabBox(button,tabBox,boxWrap){
             if(!$this.hasClass('on')){
                 tabBoxAction($this);
             }
-            
+
         });
     }
 
