@@ -1,6 +1,7 @@
 body.on {overflow:hidden;}
 
 .con-area {max-width:1400px; margin: 0 auto;}
+#con .sub-content {padding: 40px 0;}
 
 @media screen and (max-width:1400px) {
     .con-area {padding: 0 20px;}
@@ -9,14 +10,14 @@ body.on {overflow:hidden;}
     .con-area {padding: 0 15px;}
 }
 
-#header {position: fixed; z-index:900; top: 0; left: 0; width: 100%; height: 80px; border-bottom: 1px solid #e0e0e0; transition: height 0.6s; background-color: #fff;}
+#header {position: fixed; z-index:900; top: 0; left: 0; width: 100%; height: 80px; border-bottom: 1px solid #e0e0e0; transition: height 0.3s; background-color: #fff;}
 #header #logo {position: absolute; z-index:1; top: 15px; left: 30px; width: 150px; height: 50px; }
 #header #logo > a {display: block; cursor:pointer;}
 #header #logo > a > img{display: block; width: 100%;}
 
 
 #header .menu-wrap {display: block;}
-#header .menu-wrap .gnb {display: block; position:relative; height: 80px; text-align: center; transition: height 0.6s; overflow:hidden;}
+#header .menu-wrap .gnb {display: block; position:relative; height: 80px; text-align: center; transition: height 0.3s; overflow:hidden;}
 #header .menu-wrap .gnb .menu-01 {display: inline-block;}
 #header .menu-wrap .gnb .menu-01::after{content:""; display: block; clear: both;}
 #header .menu-wrap .gnb .menu-01 > li {float: left;}

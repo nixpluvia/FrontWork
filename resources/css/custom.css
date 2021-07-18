@@ -1,0 +1,78 @@
+#con .tit-01 {display: block; position:relative; padding-left: 20px; font-weight: 600; font-size: 1.75rem; color: #292929;}
+#con .tit-01::after{content:""; position: absolute; top: 10px; left:2px; width: 10px; height: 10px; background-color: #ff9900; transform: rotate(45deg);}
+
+/* FLOAT 리스트 레이아웃 1 */
+#con .f-list-01 {display: block;}
+#con .f-list-01 > ul{display: block; margin: 0 -10px;}
+#con .f-list-01 > ul::after {content:""; display: block; clear: both;}
+#con .f-list-01 > ul > li {float: left; margin-bottom: 10px;}
+#con .f-list-01 > ul > li .list-item {display: block; margin: 0 10px; background-color: rgba(0,0,0,0.3);}
+
+/* 리스트 갯수 2개 */
+#con .f-list-01 > ul.lnum2 > li {width: 50%;}
+@media screen and (max-width: 600px){
+    #con .f-list-01 > ul.lnum2 > li {width: 100%;}
+}
+
+/* 리스트 갯수 3개 */
+#con .f-list-01 > ul.lnum3 > li {width: 33.333%;}
+@media screen and (max-width: 800px){
+    #con .f-list-01 > ul.lnum3 > li {width: 50%;}
+}
+@media screen and (max-width: 600px){
+    #con .f-list-01 > ul.lnum3 > li {width: 100%;}
+    #con .f-list-01 > ul.lnum3 > li .list-item {margin: 0;}
+}
+
+/* 리스트 갯수 4개 */
+#con .f-list-01 > ul.lnum4 > li {width: 25%;}
+@media screen and (max-width: 800px){
+    #con .f-list-01 > ul.lnum4 > li {width: 50%;}
+}
+@media screen and (max-width: 600px){
+    #con .f-list-01 > ul.lnum4 > li {width: 100%;}
+    #con .f-list-01 > ul.lnum4 > li .list-item {margin: 0;}
+}
+
+/* 리스트 갯수 5개 */
+#con .f-list-01 > ul.lnum5 > li {width: 20%;}
+@media screen and (max-width: 1024px){
+    #con .f-list-01 > ul.lnum5 > li {width: 33.333%;}
+}
+@media screen and (max-width: 800px){
+    #con .f-list-01 > ul.lnum5 > li {width: 50%;}
+}
+@media screen and (max-width: 600px){
+    #con .f-list-01 > ul.lnum5 > li {width: 100%;}
+    #con .f-list-01 > ul.lnum5 > li .list-item {margin: 0;}
+}
+
+/* 리스트 갯수 6개 */
+#con .f-list-01 > ul.lnum6 > li {width: 16.666%;}
+@media screen and (max-width: 1024px){
+    #con .f-list-01 > ul.lnum6 > li {width: 33.333%;}
+}
+@media screen and (max-width: 800px){
+    #con .f-list-01 > ul.lnum6 > li {width: 50%;}
+}
+@media screen and (max-width: 600px){
+    #con .f-list-01 > ul.lnum6 > li {width: 100%;}
+    #con .f-list-01 > ul.lnum6 > li .list-item {margin: 0;}
+}
+
+
+/* 리스트 갯수 8개 */
+#con .f-list-01 > ul.lnum8 > li {width: 12.5%;}
+@media screen and (max-width: 1200px){
+    #con .f-list-01 > ul.lnum8 > li {width: 25%;}
+}
+@media screen and (max-width: 1024px){
+    #con .f-list-01 > ul.lnum8 > li {width: 33.333%;}
+}
+@media screen and (max-width: 800px){
+    #con .f-list-01 > ul.lnum8 > li {width: 50%;}
+}
+@media screen and (max-width: 600px){
+    #con .f-list-01 > ul.lnum8 > li {width: 100%;}
+    #con .f-list-01 > ul.lnum8 > li .list-item {margin: 0;}
+}
