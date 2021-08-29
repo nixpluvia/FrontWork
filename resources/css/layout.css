@@ -1,7 +1,7 @@
 body.on {overflow:hidden;}
 
 .con-area {max-width:1400px; margin: 0 auto;}
-#con .sub-content {padding: 40px 0;}
+#con .sub-content {padding: 40px 0 80px;}
 
 @media screen and (max-width:1400px) {
     .con-area {padding: 0 20px;}
