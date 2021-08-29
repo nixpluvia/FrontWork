@@ -13,6 +13,7 @@
     <script src="../resources/js/jquery-3.6.0.min.js"></script>
     <script src="../resources/js/common.js"></script>
     <script src="../resources/js/menu.js"></script>
+    <script src="../resources/js/custom.js"></script>
 
     <!-- swiper -->
     <link rel="stylesheet" href="../resources/js/swiper/swiper.css">

@@ -14,26 +14,12 @@ $(document).ready(function(){
     /* footer menu */
     accrodion('#footer .foot-t-menu .f-menu-tit','.f-menu-02','.foot-t-menu',300,true);
 
-    tabBox('.btn-tab-01','.tab-con','.tab-box-01');
-
-    winResize()
+    tabBox('.btn-tab-01',{
+        wrap: '.tab-box-01',
+        tabBox: '.tab-con'
+    });
 });
 
-function winResize(){
-    $(window).resize(function(){
-        var $header = $('#header');
-        var $moGnb = $('.mo-menu');
-        var $moGnbBg = $('.mo-menu-bg');
-        var $siteMap = $('.sitemap');
-        var $body = $('body');
-
-        $header.removeClass('on');
-        $moGnb.removeClass('on');
-        $moGnbBg.removeClass('on');
-        $siteMap.removeClass('on');
-        $body.removeClass('on');
-    });
-}
 /* FullMenu */
 function fullMenu(menuElem,menuWrap,menuBox,MinH,MaxH){
     var $menuElem = null;
@@ -237,53 +223,6 @@ function accrodion(button,sibling,menuBox,speed,indie,child){
             $acr.addClass('on');
             $acr.stop().slideDown(speed);
         }
-    }
-
-    function start(){
-        initParam();
-        mouEvent();
-    }
-
-    start();
-}
-
-/* tabBox */
-function tabBox(button,tabBox,boxWrap){
-    var $tabBtn = null;
-    var $boxWrap = null;
-    var $tabId = null;
-    var $nowTabBox = null;
-    var $actBtn = null;
-    var $actBox = null;
-
-    function initParam(){
-        $tabBtn = $(button);
-        $boxWrap = $tabBtn.closest(boxWrap);
-    }
-
-    function mouEvent(){
-        $tabBtn.on('click', function(e){
-            e.preventDefault();
-            var $this = $(this);
-
-            if(!$this.hasClass('on')){
-                tabBoxAction($this);
-            }
-
-        });
-    }
-
-    function tabBoxAction(elem){
-            $tabId = elem.attr('data-tab');
-            $nowTabBox = $('#' + $tabId);
-            $actBtn = $boxWrap.find(button + '.on');
-            $actBox = $boxWrap.find(tabBox + '.on');
-
-            $actBtn.removeClass('on');
-            $actBox.removeClass('on');
-
-            elem.addClass('on');
-            $nowTabBox.addClass('on');
     }
 
     function start(){

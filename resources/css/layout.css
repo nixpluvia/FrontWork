@@ -45,6 +45,9 @@ body.on {overflow:hidden;}
 #header .r-menu > li:last-child{margin-right: 0;}
 #header .r-menu > li > a {display: block; width: 50px; height: 50px;}
 #header .r-menu > li > a > img {display: block; width: 100%;}
+#header .r-menu .total-search {}
+#header .r-menu .site-info {}
+
 #header .r-menu .site-menu {}
 #header .r-menu .site-menu .btn-pc{display: block;}
 #header .r-menu .site-menu .btn-mo{display: none;}
@@ -52,6 +55,11 @@ body.on {overflow:hidden;}
 @media screen and (max-width: 1200px) {
     #header .r-menu .site-menu .btn-pc{display: none;}
     #header .r-menu .site-menu .btn-mo{display: block;}
+}
+
+@media screen and (max-width: 600px) {
+    #header .r-menu .total-search {display: none;}
+    #header .r-menu .site-info {display: none;}
 }
 
 #header .mo-menu-bg {display: none; position: fixed; z-index:100; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);}
