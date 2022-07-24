@@ -1,0 +1,118 @@
+.wickedpicker {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: 0 0 0 1px rgba(14, 41, 57, 0.12), 0 2px 5px rgba(14, 41, 57, 0.44), inset 0 -1px 2px rgba(14, 41, 57, 0.15);
+  background: #fefefe;
+  margin: 0 auto;
+  border-radius: 0.1px;
+  width: 270px;
+  height: 130px;
+  font-size: 14px;
+  display: none;
+  z-index: 20;
+}
+
+.wickedpicker__title {
+  position: relative;
+  background: #f2f2f2;
+  margin: 0 auto;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 12px 11px 10px 15px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #00a0a0;
+}
+
+.wickedpicker__close {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 1rem;
+  height: 1rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.wickedpicker__close:before,
+.wickedpicker__close:after {content:""; position: absolute; top: calc(50% - 1px); left:0; width: 100%; height: 2px; background-color: #fff;}
+.wickedpicker__close:before {transform: rotate(45deg);}
+.wickedpicker__close:after {transform: rotate(-45deg);}
+
+.wickedpicker__controls {
+  padding: 10px 0;
+  line-height: normal;
+  margin: 0;
+}
+
+.wickedpicker__controls__control,
+.wickedpicker__controls__control--separator {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: inherit;
+  margin: 0 auto;
+  width: 35px;
+  letter-spacing: 1.3px;
+}
+
+
+
+.wickedpicker__controls__control--separator {
+  width: 5px;
+}
+
+.text-center,
+.wickedpicker__title,
+.wickedpicker__controls,
+.wickedpicker__controls__control,
+.wickedpicker__controls__control--separator,
+.wickedpicker__controls__control-up,
+.wickedpicker__controls__control-down {
+  text-align: center;
+}
+
+.hover-state {
+  color: #3498db;
+}
+
+.wickedpicker__controls__control-up,
+.wickedpicker__controls__control-down {
+  color: #34495e;
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 12px;
+  margin: 6px auto;
+  font-size: 0;
+  cursor: pointer;
+}
+.wickedpicker__controls__control-up:before,
+.wickedpicker__controls__control-down:after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 6px);
+  left: calc(50% - 8px);
+  width: 16px;
+  height: 12px;
+  font-size: 0;
+  box-sizing: border-box;
+}
+.wickedpicker__controls__control-up:before{
+  border-bottom: 12px solid #818181;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+.wickedpicker__controls__control-down:after {
+  border-top: 12px solid #818181;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.wickedpicker__controls__control-up:hover:before {border-bottom-color: #00a0a0;}
+.wickedpicker__controls__control-down:hover:after {border-top-color: #00a0a0;}
+
+.wickedpicker__controls__control--hours,
+.wickedpicker__controls__control--separator-inner,
+.wickedpicker__controls__control--minutes {display:inline-block; font-weight: 600; font-size: 1rem; color: #000;}

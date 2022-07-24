@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+/*====== 공통 ======*/
+
+/* --- form --- */
+/* input */
+#con .intxt {display: block; height: 45px; padding: 0 15px; border: 1px solid #e9e9e9; line-height: 43px; font-weight: 500; font-size: 1rem; color: #888888;}
+#con .intxt:disabled {border-color: #f8f8f8; background-color: #f8f8f8;}
+#con .intxt:read-only {border-color: #f8f8f8; background-color: #f8f8f8;}
+#con .intxt::placeholder {color: #bcbcbc;}
+/* //input */
+
+/* select */
+#con .insel {display:block; height: 45px; padding: 0 40px 0 20px; border: 1px solid #e9e9e9; font-weight: 500; font-size: 1rem; background: #fff url(../images/common/i_sel.svg) no-repeat center right 20px; color: #888888;}
+#con .insel > option {color: inherit;}
+#con .insel > option:disabled {background-color: #e9e9e9;}
+#con .insel:disabled {border-color: #f8f8f8; background-color: #f8f8f8;}
+
+#con .cir-sel {display:block; min-width: 160px; height: 45px; padding: 0 40px 0 20px; border: 1px solid #e9e9e9; border-radius: 50px; font-weight: 400; font-size: 0.9375rem; box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.1); background: #fff url(../images/common/i_sel.svg) no-repeat center right 12px; color: #000;}
+#con .cir-sel > option {color: inherit;}
+#con .cir-sel:disabled {border-color: #f8f8f8; background-color: #f8f8f8;}
+/* //select */
+
+/* textarea */
+#con .textarea {display: block; min-height:100px; padding: 10px 15px; border: 1px solid #e9e9e9; font-weight: 400; font-size: 1rem; color: #888888; resize: vertical;}
+#con .textarea.no {resize: none;}
+#con .textarea:read-only {border-color: #f8f8f8; background-color: #f8f8f8;}
+/* //textarea */
+
+/* radio button */
+#con .radio-label {display: inline-block; height:20px; line-height: 20px; margin-right: 10px; white-space: nowrap; cursor: pointer;}
+#con .radio-label > input[type="radio"] {width: 0; height: 0; font-size: 0;}
+#con .radio-label > span {display: inline-block; line-height: 20px; font-weight: 500; font-size: 1rem; vertical-align: middle; color: #000;}
+#con .radio-label .icon {position:relative; width: 20px; height: 20px; margin-right: 5px; border: 1px solid #e9e9e9; border-radius: 50%; line-height: 20px; background-color: #fff;}
+#con .radio-label > input[type="radio"]:checked + .icon {border-color: #0aafb1; background-color: #fff;}
+#con .radio-label > input[type="radio"]:checked + .icon::before {content:""; position:absolute; top: 4px; left: 4px; width: 10px; height: 10px; border-radius: 50%; background-color: #0aafb1;}
+#con .radio-label > input[type="radio"]:checked ~ span {color: #0aafb1;}
+#con .radio-label > input[type="radio"]:disabled + .icon {background-color: #ddd;}
+
+@media screen and (max-width: 600px) {
+    #con .radio-label {height: 18px; line-height:18px;}
+    #con .radio-label > span {line-height: 18px;}
+    #con .radio-label .icon {line-height: 18px; width: 18px; height: 18px;}
+    #con .radio-label > input[type="radio"]:checked + .icon::before {top: 3px; left: 3px;}
+}
+/* //radio button */
+
+/* checkbox button */
+#con .check-label {display: inline-block; height:20px; line-height: 20px; margin-right: 10px; white-space: nowrap; cursor: pointer;}
+#con .check-label:last-child {margin-right: 0;}
+#con .check-label > * {line-height:1; vertical-align: middle;}
+#con .check-label > input[type="checkbox"] {width: 0; height: 0; font-size: 0;}
+#con .check-label > span {display: inline-block; line-height: 20px; font-weight: 500; font-size: 1rem; vertical-align: middle; color: #000;}
+#con .check-label .icon {display: inline-block; position:relative; width: 20px; height: 20px; margin-right: 5px; border: 1px solid #e9e9e9; line-height: 20px; background-color: #fff;}
+#con .check-label .icon:last-child {margin-right: 0;}
+#con .check-label .icon::before {content:""; position:absolute; top: 0; left: 0; width: 18px; height: 18px; background-repeat: no-repeat; background-position: center;}
+/* .check-label > span {display: inline-block; line-height: 20px; font-weight: 500; font-size: 1rem; vertical-align: middle; color: #888888;}
+#con .check-label > span:last-child {margin-right: 0;} */
+#con .check-label > input[type="checkbox"]:checked + .icon {border-color: #0aafb1;}
+#con .check-label > input[type="checkbox"]:checked + .icon::before {content:""; position:absolute; top: 0; left: 0; width: 18px; height: 18px; background-image: url(../images/common/i_check_on.png);}
+#con .check-label > input[type="checkbox"]:checked ~ span {color: #0aafb1;}
+#con .check-label > input[type="checkbox"]:disabled + .icon {background-color: #ddd;}
+
+/* label lists */
+#con .label-list {display: flex; align-items: center; flex-wrap: wrap;}
+#con .label-list.jf-center {justify-content: center;}
+#con .label-list.jf-right {justify-content: right;}
+#con .label-list > li {display: block; padding: 8px 0; margin-right: 15px;}
+#con .label-list > li .check-label {margin-right: 0;}
+#con .label-list > li .radio-label {margin-right: 0;}
+
+#con .label-list.jf-center > li {margin-right: 0; padding: 0 5px;}
+#con .label-list.list.jf-right > li {margin-left: 10px; margin-right: 0;}
+/* //label lists */
+
+
+/* datepicker */
+.date-box {display: block;}
+.date-box::after {content: ''; display: block; clear:both;}
+.date-box .picker {float:left; width:calc(100% - 45px); height: 45px; padding: 0 15px; border: 1px solid #e9e9e9; line-height: 43px; font-weight: 500; font-size: 1rem; color: #888888;}
+.date-box > button {float: left; width: 45px; height: 45px; border: 0; font-size: 0; background: #00a0a0 url(../images/common/i_calender.png) no-repeat center; cursor: pointer;}
+/* //datepicker */
+
+/* timepicker */
+#con .timepicker {display: block; height: 45px; padding: 0 15px 0 40px; border: 1px solid #e9e9e9; line-height: 43px; font-weight: 500; font-size: 1rem; color: #888888; background: #fff url(../images/common/clock.svg) no-repeat; background-size: 20px; background-position: center left 10px;}
+/* //timepicker */
+
+
+
+/*--- 기본 버튼 ---*/
+#con .n-btn {display: block; min-width: 130px; height: 45px; padding: 0 20px; border: 1px solid #e9e9e9; line-height: 45px; font-weight: 600; font-size: 1rem; color: #000; text-align: center; cursor: pointer;}
+#con .n-btn.auto {min-width: unset;}
+#con .n-btn.v1 {border: 0; color: #fff; background-color:#0aafb1;}
+#con .n-btn.v2 {border-color: #000; color: #fff; background-color: #000;}
+#con .n-btn.v3 {border-color: #2983d9; color: #fff; background-color: #2983d9;}
+
+/* interaction */
+#con .n-btn {box-shadow: 0px 0px 0px 0 rgba(0,0,0,0); transition: border 0.3s, box-shadow 0.3s, color 0.3s, background 0.3s;}
+#con .n-btn:hover,
+#con .n-btn:focus {border-color: #15b3d6; color:#15b3d6; box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.1);}
+#con .n-btn.v1:hover,
+#con .n-btn.v1:focus {border-color: #15b3d6; color:#fff; background-color: #15b3d6;}
+#con .n-btn.v2:hover,
+#con .n-btn.v2:focus {border-color: #000; color:#fff; background-color: #000;}
+#con .n-btn.v3:hover,
+#con .n-btn.v3:focus {border-color: #146bbd; color:#fff; background-color: #146bbd;}
+/*--- //기본 버튼 ---*/
+
+/* select + input + button */
+#con .inbtn-box {display:flex;}
+#con .inbtn-box .in-cell {display: block; margin-right: 10px;}
+#con .inbtn-box .in-cell input,
+#con .inbtn-box .in-cell select {min-width: 220px;}
+#con .inbtn-box .in-cell:last-child {margin-right: 0;}
+#con .inbtn-box .in-cell .n-btn {height: 45px;line-height:45px;}
+@media screen and (max-width: 600px) {
+    #con .inbtn-box {display: block;}
+    #con .inbtn-box .in-cell {display: block; margin-right: 0; margin-bottom: 10px;}
+    #con .inbtn-box .in-cell:last-child {margin-bottom: 0;}
+    #con .inbtn-box .in-cell input,
+    #con .inbtn-box .in-cell select {min-width: unset; width: 100%;}
+    #con .inbtn-box .in-cell .n-btn {width: 100%;}
+}
+/* //select + input + button */
+/* ---form 요소--- */
+
+/*--- 텍스트 ---*/
+#con .tc-bk{color:#000000;}
+#con .tc-wh{color:#ffffff;}
+#con .tc-red{color:red}
+#con .tc-01 {color: #0aafb1;}
+#con .tc-02 {color: #15b3d6;}
+
+/*--- 텍스트 ---*/
+
+
+/* dt, dd */
+#con .desc {display: block;}
+#con .desc::after {content:""; display: block; clear: both;}
+#con .desc .dt {float: left;}
+#con .desc .dd {display: block; overflow: hidden;}
+@media screen and (max-width: 600px) {
+    #con .desc.mo .dt {float: none;}
+}
+/* //dt, dd */
+
+/* list */
+#con .dot-list {display: block;}
+#con .dot-list > li {position: relative; padding-left: 10px; margin-bottom: 5px;}
+#con .dot-list > li:last-child{margin-bottom: 0;}
+#con .dot-list > li::before {content:""; position: absolute; top: calc(0.65rem - 1.5px); left: 0; width: 3px; height: 3px; border-radius: 50%; background-color: #000;}
+/* //list */
+
+
+
+/*--- 테이블 ---*/
+.scroll-box {display: block; position: relative;}
+.scroll-box .table-box {display: block; overflow-x: auto;}
+.info-table {width: 100%; border-top: 2px solid #000; text-align: center; background-color: #fff;}
+.info-table caption {width: 0; height: 0; font-size: 0;}
+.info-table.left_td tr td {text-align: left;}
+.info-table.fontM tr td {font-weight: 500;}
+.info-table tr {}
+.info-table tr th {padding: 10px; border-bottom: 1px solid #e9e9e9; font-weight: 700; font-size: 1.0625rem; color: #000; background-color: #f7f7f7;}
+.info-table tr th.bl {border-left: 1px solid #e9e9e9;}
+.info-table tr th + th {border-left: 1px solid #e9e9e9;}
+.info-table tr td {padding: 10px; border-bottom: 1px solid #e9e9e9;}
+.info-table tr td.bl {border-left: 1px solid #e9e9e9;}
+.info-table tr td + td {border-left: 1px solid #e9e9e9;}
+.info-table tr td.tl {text-align: left;}
+.info-table tr td.tc {text-align: center;}
+.info-table tr td.nowrap {white-space: nowrap;}
+.info-table tr .bod_link {display:block; color: #888;}
+.info-table tr .bod_link:hover {color: #217557;}
+/* .info-table tr.hover:hover th,
+.info-table tr.hover:hover td {color:#fff; background-color: #00A038;}
+.info-table tr.hover:hover td > a {color:#fff;} */
+
+/* interaction */
+.info-table.act-hover tr td {transition: background 0.3s;}
+.info-table.act-hover tr:hover td {background-color: #effffc;}
+.info-table.act-hover tbody tr th {transition: background 0.3s;}
+.info-table.act-hover tbody tr:hover th {background-color: #effffc;}
+
+@media screen and (max-width: 800px) {
+    .scroll-box::before {content:""; position: absolute; top: -20px; right: -10px; width: 40px; height: 40px; border-radius: 50%; background: #00a0a0 url(../images/common/i_swipe.png) no-repeat center;}
+    .scroll-box.mobile::before {display: none;}
+    .scroll-box.noIcon::before {display: none;}
+
+    .scroll-box .table-box .info-table {width: 800px;}
+    .scroll-box.mobile .table-box .info-table {width: 100%;}
+    .scroll-box.small .table-box .info-table {width: 100%;}
+    
+    .info-table tr th {padding: 10px;}
+    .info-table tr td {padding: 10px;}
+}
+@media screen and (max-width: 600px) {
+    .scroll-box.mobile::before {display: block;}
+    .scroll-box.mobile .table-box .info-table {width: 600px;}
+}
+@media screen and (max-width: 500px) {
+    .scroll-box.small .table-box .info-table {width: 500px;}
+}
+/*--- //테이블 ---*/
+
+
+
+/* active tab box */
+.tab-wrap{margin-bottom:40px;}
+.tab-wrap .list-wrap{display: flex;width:100%;}
+.tab-wrap .list-wrap > li{flex-grow: 1;}
+.tab-wrap .list-wrap > li > a{display:block;position:relative;padding:15px 10px;border-width:1px 1px 1px 0;border-style:solid;border-color:#e9e9e9;color:#4e5b6f;font-size: 1.25rem;font-weight: 500;text-align: center;background:#fff;}
+.tab-wrap .list-wrap > li > a.active{border:none;color:#fff;background: rgb(53,63,186);}
+.tab-wrap .list-wrap > li:first-child > a{border-left:1px solid #e9e9e9;}
+
+.tab-con-wrap .tab-con {display: block;}
+.tab-con-wrap .tab-con {display: none;}
+.tab-con-wrap .tab-con.active {display: block;}
+
+@media screen and (max-width:800px){
+    .tab-wrap{display:block;overflow:hidden;position:relative;z-index:1;height:50px;margin-bottom:20px;}
+    .tab-wrap:after{content: '';position: absolute;top:22px;right:20px;z-index:99;border-top:5px solid #fff;border-right: 5px solid transparent;border-left: 5px solid transparent;}
+    .tab-wrap .list-wrap{display:block;overflow:hidden;position:absolute;top:0;left:0;z-index:99;width:100%;margin-right:0;padding-top:50px;}
+    .tab-wrap .list-wrap > li{display:block;float:none;width:100%;visibility: hidden;}
+    .tab-wrap .list-wrap > li > a{margin-right:0;padding:0;line-height:50px;border-width:0 1px 1px;}
+    .tab-wrap .list-wrap > li > a:after{content:none;}
+    .tab-wrap .list-wrap > li > a.active{position:absolute;top:0;left:0;width: 100%;visibility: visible;}
+
+    .tab-wrap.active{overflow: initial;}
+    .tab-wrap.active .list-wrap{height: auto;}
+    .tab-wrap.active .list-wrap > li{visibility: visible;}
+}
+/*====== 공통 ======*/
+
+
+
+#containar{position:relative;}

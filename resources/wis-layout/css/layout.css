@@ -1,0 +1,9 @@
+
+html,body{height:100%;}
+body.action{overflow:hidden;height: 100%;}
+*{line-height: 1.3;}
+#wrap{overflow:hidden;position:relative;min-height:100%;background: #ccc;}
+
+
+.con-area{width:100%;max-width:1400px;margin:0 auto;}
+.con-area:after{content:"";display:block;clear:both;}
